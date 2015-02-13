@@ -1,4 +1,4 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -14,7 +14,7 @@ def home(request, format=None):
 
   value = "hello world"
   #return HttpResponse("Hello, world. This is dash index.")
-  return Response(request, 'home.html', {'value' : value})
+  return render(request, 'home.html', {'value' : value})
 
 
 
