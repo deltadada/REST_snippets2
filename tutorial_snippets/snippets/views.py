@@ -23,10 +23,12 @@ def snippet_list(request, format=None):
     """
     List all snippets, or create a new snippet.
     """
+
     if request.method == 'GET':
         snippets = Snippet.objects.all()
         serializer = SnippetSerializer(snippets, many=True)
         return Response(serializer.data)
+
 
     elif request.method == 'POST':
         serializer = SnippetSerializer(data=request.data)

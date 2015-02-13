@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^home/$', views.home),
 ]
 
+#allows for url http://127.0.0.1:8000/snippets/.json
 urlpatterns = format_suffix_patterns(urlpatterns)
