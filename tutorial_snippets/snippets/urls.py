@@ -11,4 +11,4 @@ urlpatterns = [
     url(r'^home/$', views.home),
 ]
 
-#urlpatterns = format_suffix_patterns(urlpatterns)
+urlpatterns = format_suffix_patterns(urlpatterns)
